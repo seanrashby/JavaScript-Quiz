@@ -1,0 +1,14 @@
+*{
+    background-color: rgb(110, 110, 114);
+}
+
+.container{
+    display: block;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 00 5px 9px 0 white; 
+    transition: 0.9s;
+    width: 45vw; 
+    padding: 25px; 
+}
