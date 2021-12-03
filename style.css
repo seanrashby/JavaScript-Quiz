@@ -48,6 +48,7 @@ button:hover{
 
 
 
+
 .slide{
   position: absolute;
   left: 0px;
@@ -65,4 +66,8 @@ button:hover{
   position: relative;
   height: 200px;
   margin-top: 40px;
+}
+
+.hidden{
+  display: none;
 }
