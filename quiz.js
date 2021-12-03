@@ -1,5 +1,6 @@
 (function(){
   // Functions
+  var timer;
   function buildQuiz(){
     // variable to store the HTML output
     const output = [];
@@ -38,13 +39,15 @@
     quizContainer.innerHTML = output.join('');
   }
   
-  function timer(){
+  function startTimer(){
     var sec = 30;
-    var timer = setInterval(function(){
-        document.getElementById('timer').innerHTML='00:'+sec;
+    var element = document.getElementById('timer');
+    timer = setInterval(function(){
         sec--;
-        if (sec < 0) {
+        element.innerHTML='00:'+sec;
+        if (sec <= 0) {
             clearInterval(timer);
+            showResults()
         }
     }, 1000);
   }
@@ -58,11 +61,11 @@
       notStarted[i].classList.remove("hidden");
     }
     
-    timer(); 
+    startTimer(); 
   }
 
   function showResults(){
-
+    clearInterval(timer);
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
 
